@@ -1,0 +1,52 @@
+#!/bin/bash
+tit="                ⚡ 𝘿𝙧𝙤𝙬𝙆𝙂𝙚𝙣𝘽𝙤𝙩 ⚡"
+x="\n"
+LINE="━━━━━━━━━━━━━━━━━━━━━━━━"
+linea="•✦────────────────────•✧"
+keytit="═════|⚡𝘿𝙧𝙤𝙬𝙆𝙂𝙚𝙣𝘽𝙤𝙩⚡|═════"
+powered="	𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 @drowkid01"
+lin="════════════════════════"
+instalador="apt-get update && apt-get upgrade && wget --no-check-certificate https://raw.githubusercontent.com/drowkid01/LACASITAMX/main/LACASITA.sh && chmod +x LACASITA.sh && ./LACASITA.sh"
+admin="@drowkid01"
+arch=".edicionbot"
+
+edicionbot(){
+ instalador(){
+ read -p "Escriba el nuevo instalador: " newinst
+ echo "${newinst}">>${arch}
+ }
+ admin(){
+ read -p "Escriba el nuevo admin/reseller que aparecerá en el keygen: " adm
+ echo "${adm}">>${arch}
+ }
+ add(){
+ read -p "Ingrese el ID del nuevo admin: " nwd
+ echo "${nwd}">>userID
+ }
+ addbot(){
+ read -p "Ingrese el token de su bot: " bot
+ echo "${bot}">>token
+ read -p "Ingrese su ID de telegram: " idd
+ echo "${idd}">>adminID
+ }
+clear && clear
+echo -e "\e[1;33m |𝘿𝙧𝙤𝙬𝙆𝙂𝙚𝙣𝘽𝙤𝙩|\e[0m
+
+ 1)Editar instalador.
+
+ 2)Editar reseller.
+
+ 3)Configurar bot.
+
+ 4)Añadir admin al bot.
+
+"
+read -p " ╰► Seleccione su respuesta: " opx
+case $opx in
+1|01)instalador ;;
+2|02)admin ;;
+3|03)addbot ;;
+4|04)add ;;
+esac
+}
+edicionbot

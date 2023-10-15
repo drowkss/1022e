@@ -1,0 +1,5 @@
+#!bin/bash
+mkdir upda
+cp * ./upda
+cd upda
+tar --create * -f bott.arch
